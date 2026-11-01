@@ -7,7 +7,7 @@
 <meta name="description" content="Portfolio d'Aurélien Fünffrock, étudiant en BUT Informatique en reconversion depuis la microbiologie, à la recherche d'un stage back-end / DevOps et d'une alternance.">
 <meta name="color-scheme" content="dark light">
 <meta name="referrer" content="no-referrer">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; frame-src 'none'; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; frame-src 'none'; base-uri 'none'; form-action https://formspree.io">
 <link rel="stylesheet" href="style.css">
 <script src="theme-init.js"></script>
 </head>
@@ -424,7 +424,12 @@
     </h2>
 
     <div class="contact-grid">
-      <form class="contact-form" id="contactForm" novalidate>
+      <form
+  class="contact-form"
+  id="contactForm"
+  action="https://formspree.io/f/mjyyazrk"
+  method="POST"
+>
         <label>
           Nom
           <input type="text" name="name" autocomplete="name" maxlength="80" required>
@@ -437,8 +442,9 @@
           Message
           <textarea name="message" rows="5" maxlength="2000" required></textarea>
         </label>
-        <button type="submit" class="btn btn-primary">Préparer l'email</button>
-        <p class="form-status" id="formStatus" role="status">Le formulaire prépare un email dans votre messagerie : aucun message n’est stocké sur le site.</p>
+       <button type="submit" class="btn btn-primary">
+          Envoyer le message
+       </button>
       </form>
 
       <ul class="contact-links">
